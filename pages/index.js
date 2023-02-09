@@ -86,7 +86,7 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <header className="header">
-          <h1>Let's WriteASong.Today</h1>
+          <h1>Let&apos;s WriteASong.Today</h1>
         </header>
         <div className={styles['page-wrapper']}>
           <div className="content">
