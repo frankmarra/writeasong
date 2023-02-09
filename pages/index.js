@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react'
 import KeyDisplay from '@/components/KeyDisplay'
 import Progressions from '@/components/Progressions'
 import { Key } from 'tonal'
-import WritingTips from '@/components/WritingTips'
+
 import About from '@/components/About'
 
 const inter = Inter({ subsets: ['latin'] })
