@@ -12,7 +12,7 @@ export default function Progressions(props) {
       <div className="progressions">
         {randomKey.type == 'major' ? (
           <ul>
-            <li>I IV V IV</li>
+            <li>I - IV - V - IV</li>
             <li>
               {Progression.fromRomanNumerals(randomKey.tonic, [
                 'I',
@@ -21,7 +21,7 @@ export default function Progressions(props) {
                 'IV'
               ]).map((note) => `${note} `)}
             </li>
-            <li>I V vi IV</li>
+            <li>I - V - vi - IV</li>
             <li>
               {Progression.fromRomanNumerals(randomKey.tonic, [
                 'I',
@@ -30,7 +30,7 @@ export default function Progressions(props) {
                 'IV'
               ]).map((note) => `${note} `)}
             </li>
-            <li>I vi IV V</li>
+            <li>I - vi - IV - V</li>
             <li>
               {Progression.fromRomanNumerals(randomKey.tonic, [
                 'I',
@@ -42,7 +42,7 @@ export default function Progressions(props) {
           </ul>
         ) : (
           <ul>
-            <li>i iv V</li>
+            <li>i - iv - V</li>
             <li>
               {Progression.fromRomanNumerals(randomKey.tonic, [
                 'Im',
@@ -50,7 +50,7 @@ export default function Progressions(props) {
                 'V'
               ]).map((note) => `${note} `)}
             </li>
-            <li>i bVI bIII bVII</li>
+            <li>i - bVI - bIII - bVII</li>
             <li>
               {Progression.fromRomanNumerals(randomKey.tonic, [
                 'Im',

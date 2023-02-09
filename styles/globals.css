@@ -194,3 +194,10 @@ ul {
   }
 }
   
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  position: sticky;
+  bottom: 0;
+}

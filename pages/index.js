@@ -112,6 +112,7 @@ export default function Home() {
           <About />
         </div>
       </main>
+      <footer>&copy; Frank Marra 2023</footer>
     </>
   )
 }
