@@ -49,7 +49,7 @@ export default function Home() {
   useEffect(() => {
     generateKey(keys)
     generateTempo()
-  }, [])
+  }, [keys])
 
   const generateKey = (keys) => {
     let generatedKey = keys[Math.floor(Math.random() * keys.length)]

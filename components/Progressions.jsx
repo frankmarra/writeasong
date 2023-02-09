@@ -7,7 +7,7 @@ export default function Progressions(props) {
   const [progressions, setProgressions] = useState([])
 
   return props.randomKey ? (
-    <div className="card" onClick={() => getProgressions(randomKey)}>
+    <div className="card">
       <p>Progressions</p>
       <div className="progressions">
         {randomKey.type == 'major' ? (
