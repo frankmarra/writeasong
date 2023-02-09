@@ -76,22 +76,29 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <h1>Lets Write A Song</h1>
-        <KeyDisplay randomKey={randomKey} />
-        <div className={styles['.tempo-wrapper']}>
-          <div className={styles.tempo}>
-            <p>Tempo</p>
-            <h2>{tempo}</h2>
+        <header className={styles.header}>
+          <h1>Lets WriteASong.Today</h1>
+        </header>
+        <div className={styles['page-wrapper']}>
+          <div className={styles.content}>
+            <KeyDisplay randomKey={randomKey} />
+            <Progressions randomKey={randomKey} />
+            <div className={styles['tempo-wrapper']}>
+              <p>Tempo</p>
+              <div className={styles.tempo}>
+                <h2>{tempo}</h2>
+                <p>BPM</p>
+              </div>
+            </div>
           </div>
+          <button
+            className={styles['generate-button']}
+            type="button"
+            onClick={handleClick}
+          >
+            Get Inspired
+          </button>
         </div>
-        <Progressions randomKey={randomKey} />
-        <button
-          className={styles['generate-button']}
-          type="button"
-          onClick={handleClick}
-        >
-          Get Inspired
-        </button>
       </main>
     </>
   )
