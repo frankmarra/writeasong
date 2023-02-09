@@ -178,9 +178,19 @@ ul {
   .key-name, .progressions, .tempo {
   
   
-    font-size: .9rem;
+    font-size: .8rem;
     text-align: center;
 
+  }
+
+  .progressions {
+    font-size: .55rem;
+  }
+
+  .about {
+    width: 40ch;
+    font-size: .7rem;
+    line-height: 1.5;
   }
 }
   
