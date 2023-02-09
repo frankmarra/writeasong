@@ -12,7 +12,7 @@ export default function Progressions(props) {
     }
   }, [randomKey])
   const getProgressions = (randomKey) => {
-    let standardProgressions = [
+    let majorProgressions = [
       [
         'I - IV - V - IV',
         Progression.fromRomanNumerals(randomKey.tonic, ['I', 'IV', 'V', 'IV'])
@@ -26,9 +26,16 @@ export default function Progressions(props) {
         Progression.fromRomanNumerals(randomKey.tonic, ['I', 'VIm', 'IV', 'V'])
       ],
       [
-        'i - iv - V',
-        Progression.fromRomanNumerals(randomKey.tonic, ['Im', 'IVm', 'V'])
+        'I - V - IV',
+        Progression.fromRomanNumerals(randomKey.tonic, ['I', 'V', 'IV'])
       ],
+      [
+        'vi - IV - I - V',
+        Progression.fromRomanNumerals(randomKey.tonic, ['VIm', 'IV', 'I', 'V'])
+      ]
+    ]
+
+    let minorProgressions = [
       [
         'i - bVI - bIII - bVII',
         Progression.fromRomanNumerals(randomKey.tonic, [
@@ -39,32 +46,75 @@ export default function Progressions(props) {
         ])
       ],
       [
-        'I - V - IV',
-        Progression.fromRomanNumerals(randomKey.tonic, ['I', 'V', 'IV'])
+        'i - iv - V',
+        Progression.fromRomanNumerals(randomKey.tonic, ['Im', 'IVm', 'V'])
       ],
       [
-        'vi - IV - I - V',
-        Progression.fromRomanNumerals(randomKey.tonic, ['VIm', 'IV', 'I', 'V'])
+        'i - iv - III - VI',
+        Progression.fromRomanNumerals(randomKey.tonic, [
+          'Im',
+          'IVm',
+          'III',
+          'VI'
+        ])
+      ],
+      [
+        'i - III - VII - v',
+        Progression.fromRomanNumerals(randomKey.tonic, [
+          'Im',
+          'III',
+          'VII',
+          'Vm'
+        ])
+      ],
+      [
+        'i - VII - VI - VII',
+        Progression.fromRomanNumerals(randomKey.tonic, [
+          'Im',
+          'VII',
+          'VI',
+          'VII'
+        ])
       ]
     ]
 
     let picks = []
     for (let x = 0; x < 3; x++) {
-      if (picks == []) {
-        picks.push(
-          standardProgressions[
-            Math.floor(Math.random() * standardProgressions.length)
-          ]
-        )
-      } else {
-        let newPick =
-          standardProgressions[
-            Math.floor(Math.random() * standardProgressions.length)
-          ]
-        if (!picks.includes(newPick)) {
-          picks.push(newPick)
+      if (randomKey.type == 'major') {
+        if (picks == []) {
+          picks.push(
+            majorProgressions[
+              Math.floor(Math.random() * majorProgressions.length)
+            ]
+          )
         } else {
-          x--
+          let newPick =
+            majorProgressions[
+              Math.floor(Math.random() * majorProgressions.length)
+            ]
+          if (!picks.includes(newPick)) {
+            picks.push(newPick)
+          } else {
+            x--
+          }
+        }
+      } else {
+        if (picks == []) {
+          picks.push(
+            minorProgressions[
+              Math.floor(Math.random() * minorProgressions.length)
+            ]
+          )
+        } else {
+          let newPick =
+            minorProgressions[
+              Math.floor(Math.random() * minorProgressions.length)
+            ]
+          if (!picks.includes(newPick)) {
+            picks.push(newPick)
+          } else {
+            x--
+          }
         }
       }
     }
