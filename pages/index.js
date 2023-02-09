@@ -5,6 +5,8 @@ import { useState, useEffect } from 'react'
 import KeyDisplay from '@/components/KeyDisplay'
 import Progressions from '@/components/Progressions'
 import { Key } from 'tonal'
+import WritingTips from '@/components/WritingTips'
+import About from '@/components/About'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -76,7 +78,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <header className={styles.header}>
+        <header className="header">
           <h1>Lets WriteASong.Today</h1>
         </header>
         <div className={styles['page-wrapper']}>
@@ -100,6 +102,7 @@ export default function Home() {
           >
             Get Inspired
           </button>
+          <About />
         </div>
       </main>
     </>

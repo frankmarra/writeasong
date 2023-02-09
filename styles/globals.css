@@ -1,3 +1,8 @@
+@font-face {
+  font-family: subway;
+  src: url('/fonts/Subway-Black.ttf');
+}
+
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
@@ -52,8 +57,8 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
   height: 100%;
-  /* background-color: #fac98e; */
   background-color: #D95448;
+  font-family:Arial, Helvetica, sans-serif;
 }
 
 
@@ -63,11 +68,18 @@ a {
   text-decoration: none;
 }
 
+.header {
+  text-align: center;
+  margin-block: 4vh;
+  font-family: subway;
+  color: white;
+  letter-spacing: .6rem;
+  font-size: 2rem;
+}
+
 .content {
   width: 80vw;
-  /* display:flex;
-  flex-flow: row;
-  justify-content: space-evenly; */
+  margin-block: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 50px;
@@ -89,30 +101,23 @@ a {
   box-shadow: 0 0 10px 5px rgba(103, 103, 103, 0.2);
   margin-block: 5vh;
   padding-block: 3vh;
-  transition: .3s;
+  transition: .2s;
 }
 
 .card:hover {
-  background: #7da4f1a7;
+  background: #6892e7;
   color: white;
 }
+
 .key-name, .progressions, .tempo {
-  
-  
   font-size: 1.5rem;
   text-align: center;
-  /* border: 2px solid #6892e7;
-  border-radius: 10px; */
-  
 }
+
 .progressions-wrapper {
   text-align: center;
   font-size: 1.5rem;
 }
-/* .progressions {
-  
-  padding: 10px 30px;
-} */
 
 ul {
   list-style: none;
@@ -125,7 +130,7 @@ ul {
   border: none;
   border-radius: 3px;
   padding: 10px;
-  margin-block: 5vh;
+  margin-block: 2vh;
   box-shadow: 2px 2px 5px 0 rgba(103, 103, 103, 0.5);
   transition: .3s;
 }
@@ -133,3 +138,49 @@ ul {
 .generate-button:active, .card:active {
   transform:translateY(3px);
 }
+
+.about {
+  width: 70ch;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    
+    margin-block: 2vh;
+    letter-spacing: .2rem;
+    font-size: .7rem;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+    
+  }
+
+  .card {
+    display: grid;
+    grid-template-rows: max-content 75px 1fr;
+    align-items: center;
+    
+    text-align: center;
+    font-size: 1rem;
+    
+    border-radius: 10px;
+    box-shadow: 0 0 10px 5px rgba(103, 103, 103, 0.2);
+    margin-block: 2vh;
+    padding-block: 3vh;
+    transition: .2s;
+  }
+
+  .key-name, .progressions, .tempo {
+  
+  
+    font-size: .9rem;
+    text-align: center;
+
+  }
+}
+  
