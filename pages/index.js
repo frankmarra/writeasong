@@ -79,7 +79,7 @@ export default function Home() {
         <meta property="og:description" content="A fun songwriting tool" />
         <meta
           property="og:image"
-          content="https://res.cloudinary.com/silverbeard/image/upload/v1675977782/Portfolio/project%20pictures/Screen_Shot_2023-02-09_at_4.18_gsqnyj.png"
+          content="https://res.cloudinary.com/silverbeard/image/upload/v1675984256/Portfolio/project%20pictures/Screen_Shot_2023-02-09_at_6.10_gy6jkm.png"
         />
         <meta property="og:url" content="https://staging.writeasong.today" />
         <link rel="icon" href="/favicon.ico" />
