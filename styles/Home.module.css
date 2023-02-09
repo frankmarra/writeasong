@@ -7,8 +7,19 @@
 
 }
 
+.main h1 {
+  grid-row: 1 / 1;
+  grid-column: 1/ -1;
+}
 .generate-button {
-  grid-row: 3 / 4;
+  grid-row: 4 / 4;
   grid-column: 1 / -1;
   width: 50%;
+}
+
+.tempo {
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 50px;
+  border: 2px solid gray;
 }

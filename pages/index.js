@@ -76,10 +76,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
+        <h1>Lets Write A Song</h1>
         <KeyDisplay randomKey={randomKey} />
         <div className={styles['.tempo-wrapper']}>
           <div className={styles.tempo}>
-            <p>Tempo: {tempo}</p>
+            <p>Tempo</p>
+            <h2>{tempo}</h2>
           </div>
         </div>
         <Progressions randomKey={randomKey} />

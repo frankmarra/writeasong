@@ -1,23 +1,29 @@
-import { Key } from 'tonal'
-import { useState, useEffect } from 'react'
-
 export default function KeyDisplay({ randomKey }) {
   return (
     randomKey && (
       <div className="key-details-wrapper">
         <div className="key-name">
-          <p>
-            Key of {randomKey.tonic} {randomKey.type}
-          </p>
+          <p>Key</p>
+          <h2>{randomKey.tonic}</h2>
+          <p>{randomKey.type}</p>
         </div>
         <div className="key-notes">
           {randomKey.type == 'major' ? (
-            <p>Notes: {randomKey.scale}</p>
+            <p>Notes: {randomKey.scale.map((note) => `${note} `)}</p>
           ) : (
             <>
-              <p>Natural Notes: {randomKey.natural.scale}</p>
-              <p>Harmonic Notes: {randomKey.harmonic.scale}</p>
-              <p>Melodic Notes: {randomKey.melodic.scale}</p>
+              <p>
+                Natural Notes:{' '}
+                {randomKey.natural.scale.map((note) => `${note} `)}
+              </p>
+              <p>
+                Harmonic Notes:{' '}
+                {randomKey.harmonic.scale.map((note) => `${note} `)}
+              </p>
+              <p>
+                Melodic Notes:{' '}
+                {randomKey.melodic.scale.map((note) => `${note} `)}
+              </p>
             </>
           )}
         </div>

@@ -47,55 +47,56 @@ export default function Progressions({ randomKey }) {
   return (
     randomKey && (
       <div className="progressions-wrapper">
+        Progressions
         <div className="progressions">
           {randomKey.type == 'major' ? (
             <ul>
-              <li>I, IV, V:</li>
+              <li>I IV V IV</li>
               <li>
                 {Progression.fromRomanNumerals(randomKey.tonic, [
                   'I',
                   'IV',
                   'V',
                   'IV'
-                ])}
+                ]).map((note) => `${note} `)}
               </li>
-              <li>I, V, vi, IV</li>
+              <li>I V vi IV</li>
               <li>
                 {Progression.fromRomanNumerals(randomKey.tonic, [
                   'I',
                   'V',
                   'VIm',
                   'IV'
-                ])}
+                ]).map((note) => `${note} `)}
               </li>
-              <li>I, vi, IV, V</li>
+              <li>I vi IV V</li>
               <li>
                 {Progression.fromRomanNumerals(randomKey.tonic, [
                   'I',
                   'VIm',
                   'IV',
                   'V'
-                ])}
+                ]).map((note) => `${note} `)}
               </li>
             </ul>
           ) : (
             <ul>
-              <li>i, iv, V</li>
+              <li>i iv V</li>
               <li>
                 {Progression.fromRomanNumerals(randomKey.tonic, [
                   'Im',
                   'IVm',
                   'V'
-                ])}
+                ]).map((note) => `${note} `)}
               </li>
-              <li>i, bVI, bIII, bVII</li>
+              <li>i bVI bIII bVII</li>
               <li>
                 {Progression.fromRomanNumerals(randomKey.tonic, [
                   'Im',
                   'bVI',
                   'bIII',
                   'bVII'
-                ])}
+                ]).map((note) => `${note} `)}
               </li>
             </ul>
           )}

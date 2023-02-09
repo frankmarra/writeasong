@@ -106,9 +106,23 @@ a {
   flex-flow: column;
   align-items: center;
   justify-content: space-around;
+  font-size: 1.5rem;
+  text-align: center;
+  border: 2px solid gray;
+  padding: 10px 30px;
 }
 
+.progressions-wrapper {
+  font-size: 1.5rem;
+  grid-column: 1 / -1;
+  border: 2px solid gray;
+  text-align: center;
+  padding: 10px 30px
+}
 
+ul {
+  list-style: none;
+}
 
 
 @media (prefers-color-scheme: dark) {
