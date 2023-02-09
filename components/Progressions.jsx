@@ -46,8 +46,8 @@ export default function Progressions({ randomKey }) {
 
   return (
     randomKey && (
-      <div className="progressions-wrapper">
-        Progressions
+      <div className="card">
+        <p>Progressions</p>
         <div className="progressions">
           {randomKey.type == 'major' ? (
             <ul>

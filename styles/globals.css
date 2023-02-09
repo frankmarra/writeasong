@@ -52,7 +52,8 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
   height: 100%;
-  background-color: rgb(255, 233, 179);
+  /* background-color: #fac98e; */
+  background-color: #D95448;
 }
 
 
@@ -61,34 +62,74 @@ a {
   color: inherit;
   text-decoration: none;
 }
-.key-details-wrapper {
-  text-align: center;
-  font-size: 1.5rem;
+
+.content {
+  width: 80vw;
+  /* display:flex;
+  flex-flow: row;
+  justify-content: space-evenly; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 50px;
+  border-top: 1px solid #6892e7;
+  border-bottom: 1px solid #6892e7;
 }
-.key-name {
+
+
+
+.card {
+  display: grid;
+  grid-template-rows: max-content 200px 1fr;
+  align-items: center;
+  
+  text-align: center;
+  font-size: 1.5rem;
+  
+  border-radius: 10px;
+  box-shadow: 0 0 10px 5px rgba(103, 103, 103, 0.2);
+  margin-block: 5vh;
+  padding-block: 3vh;
+  transition: .3s;
+}
+
+.card:hover {
+  background: #7da4f1a7;
+  color: white;
+}
+.key-name, .progressions, .tempo {
   
   
   font-size: 1.5rem;
   text-align: center;
-  border: 2px solid gray;
-  border-radius: 10px;
-  padding: 40px 75px;
+  /* border: 2px solid #6892e7;
+  border-radius: 10px; */
+  
 }
 .progressions-wrapper {
   text-align: center;
   font-size: 1.5rem;
 }
-.progressions {
-  font-size: 1.5rem;
+/* .progressions {
   
-  border: 2px solid gray;
-  border-radius: 10px;
-  text-align: center;
   padding: 10px 30px;
-}
+} */
 
 ul {
   list-style: none;
 }
 
+.generate-button {
+  background-color: #6892e7;
+  color: white;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 3px;
+  padding: 10px;
+  margin-block: 5vh;
+  box-shadow: 2px 2px 5px 0 rgba(103, 103, 103, 0.5);
+  transition: .3s;
+}
 
+.generate-button:active, .card:active {
+  transform:translateY(3px);
+}

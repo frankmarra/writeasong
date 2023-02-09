@@ -1,17 +1,11 @@
-.main{
-  
-}
 
 .header {
   text-align: center;
   margin-block: 4vh;
 }
-.generate-button {
-  
-}
 
 .page-wrapper {
-  background-color: #f2f2f2;
+  background-color: #f9d0d0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,18 +16,7 @@
   border-top-right-radius: 10px;
   box-shadow: 0 0 10px 5px rgba(0,0,0,0.2);
 }
-.content {
-  width: 80vw;
-  display:flex;
-  flex-flow: row;
-  justify-content: space-evenly;
-  border-top: 1px solid rgb(173, 173, 173);
 
-}
-
-.content * + * {
-  margin-block: 2vh;
-}
 .tempo-wrapper {
   text-align: center;
   font-size: 1.5rem;
@@ -42,6 +25,6 @@
   font-size: 1.5rem;
   text-align: center;
   padding: 50px;
-  border: 2px solid gray;
+  border: 2px solid #6892e7;
   border-radius: 10px;
 }

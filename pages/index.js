@@ -80,19 +80,21 @@ export default function Home() {
           <h1>Lets WriteASong.Today</h1>
         </header>
         <div className={styles['page-wrapper']}>
-          <div className={styles.content}>
-            <KeyDisplay randomKey={randomKey} />
+          <div className="content">
+            <div onClick={() => generateKey(keys)}>
+              <KeyDisplay randomKey={randomKey} />
+            </div>
             <Progressions randomKey={randomKey} />
-            <div className={styles['tempo-wrapper']}>
+            <div className="card" onClick={() => generateTempo()}>
               <p>Tempo</p>
-              <div className={styles.tempo}>
+              <div className="tempo">
                 <h2>{tempo}</h2>
                 <p>BPM</p>
               </div>
             </div>
           </div>
           <button
-            className={styles['generate-button']}
+            className="generate-button"
             type="button"
             onClick={handleClick}
           >

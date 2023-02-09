@@ -1,7 +1,7 @@
 export default function KeyDisplay({ randomKey }) {
   return (
     randomKey && (
-      <div className="key-details-wrapper">
+      <div className="card">
         <p>Key</p>
         <div className="key-name">
           <h2>{randomKey.tonic}</h2>
