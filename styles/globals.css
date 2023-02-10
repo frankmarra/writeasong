@@ -200,7 +200,7 @@ ul {
 
   .card {
     display: grid;
-    grid-template-rows: max-content 75px 1fr;
+    grid-template-rows: max-content 125px 1fr;
     align-items: center;
     
     text-align: center;
@@ -223,7 +223,13 @@ ul {
 
   .progressions {
     font-size: .55rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     
+  }
+
+  .progression {
+    font-size: .46rem;
   }
 
   .about {
