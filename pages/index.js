@@ -81,7 +81,7 @@ export default function Home() {
           property="og:image"
           content="https://res.cloudinary.com/silverbeard/image/upload/v1676061266/Portfolio/project%20pictures/Screen_Shot_2023-02-10_at_3.33_meqhyg.png"
         />
-        <meta property="og:url" content="https://staging.writeasong.today" />
+        <meta property="og:url" content="https://writeasong.today" />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
