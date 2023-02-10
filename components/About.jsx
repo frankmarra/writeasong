@@ -6,8 +6,8 @@ export default function About() {
           WriteASong.Today is here to jump-start your song writing process.
           Click on &quot;Get Inspired&quot; and get a key, popular chord
           progressions, and a tempo to start writing with. You can also click on
-          the boxes to change them independently, but clicking on the key box
-          will change the progressions also.
+          the randomize buttons to change them independently, but changing the
+          key will also change the progressions.
         </p>
         <br />
         <p>
