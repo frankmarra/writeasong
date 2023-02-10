@@ -8,36 +8,37 @@ export default function Progressions(props) {
 
   useEffect(() => {
     if (randomKey) {
-      getProgressions(randomKey)
+      getRandomProgressions(randomKey)
     }
   }, [randomKey])
-  const getProgressions = (randomKey) => {
+
+  const getRandomProgressions = (randomKey) => {
     let majorProgressions = [
       [
-        'I - IV - V - IV',
+        ['I', 'IV', 'V', 'IV'],
         Progression.fromRomanNumerals(randomKey.tonic, ['I', 'IV', 'V', 'IV'])
       ],
       [
-        'I - V - vi - IV',
+        ['I', 'V', 'vi', 'IV'],
         Progression.fromRomanNumerals(randomKey.tonic, ['I', 'V', 'VIm', 'IV'])
       ],
       [
-        'I - vi - IV - V',
+        ['I', 'vi', 'IV', 'V'],
         Progression.fromRomanNumerals(randomKey.tonic, ['I', 'VIm', 'IV', 'V'])
       ],
       [
-        'I - V - IV',
+        ['I', 'V', 'IV'],
         Progression.fromRomanNumerals(randomKey.tonic, ['I', 'V', 'IV'])
       ],
       [
-        'vi - IV - I - V',
+        ['vi', 'IV', 'I', 'V'],
         Progression.fromRomanNumerals(randomKey.tonic, ['VIm', 'IV', 'I', 'V'])
       ]
     ]
 
     let minorProgressions = [
       [
-        'i - bVI - bIII - bVII',
+        ['i', 'bVI', 'bIII', 'bVII'],
         Progression.fromRomanNumerals(randomKey.tonic, [
           'Im',
           'bVI',
@@ -46,11 +47,11 @@ export default function Progressions(props) {
         ])
       ],
       [
-        'i - iv - V',
+        ['i', 'iv', 'V'],
         Progression.fromRomanNumerals(randomKey.tonic, ['Im', 'IVm', 'V'])
       ],
       [
-        'i - iv - III - VI',
+        ['i', 'iv', 'III', 'VI'],
         Progression.fromRomanNumerals(randomKey.tonic, [
           'Im',
           'IVm',
@@ -59,7 +60,7 @@ export default function Progressions(props) {
         ])
       ],
       [
-        'i - III - VII - v',
+        ['i', 'III', 'VII', 'v'],
         Progression.fromRomanNumerals(randomKey.tonic, [
           'Im',
           'III',
@@ -68,7 +69,7 @@ export default function Progressions(props) {
         ])
       ],
       [
-        'i - VII - VI - VII',
+        ['i', 'VII', 'VI', 'VII'],
         Progression.fromRomanNumerals(randomKey.tonic, [
           'Im',
           'VII',
@@ -120,21 +121,34 @@ export default function Progressions(props) {
     }
     setRandomProgressions(picks)
   }
+
   return props.randomKey ? (
-    <div className="card" onClick={() => getProgressions(randomKey)}>
-      <p>Progressions</p>
-      <div className="progressions">
-        {randomProgressions.map((progression, index) => (
-          <div className="progression" key={index}>
-            <div className="numeral">{progression[0]}</div>
-            <div className="chords">
-              {progression[1].map((note, index) =>
-                index + 1 == progression[1].length ? `${note}` : `${note} - `
-              )}
+    <div style={{ textAlign: 'center', marginBottom: '2vh' }}>
+      <div className="card" onClick={() => getRandomProgressions(randomKey)}>
+        <p>Progressions</p>
+        <div className="progressions">
+          {randomProgressions.map((progression, index) => (
+            <div className="progression" key={index}>
+              <div className="numeral">
+                {progression[0].map((numeral, index) => (
+                  <span key={index}>{numeral}</span>
+                ))}
+              </div>
+              <div className="chords">
+                {progression[1].map((note, index) => (
+                  <span key={index}>{note}</span>
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
+      <button
+        className="generate-button random"
+        onClick={() => getRandomProgressions(randomKey)}
+      >
+        Randomize
+      </button>
     </div>
   ) : (
     <p>loading...</p>

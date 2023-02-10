@@ -82,7 +82,24 @@ export default function Home() {
           content="https://res.cloudinary.com/silverbeard/image/upload/v1675984256/Portfolio/project%20pictures/Screen_Shot_2023-02-09_at_6.10_gy6jkm.png"
         />
         <meta property="og:url" content="https://staging.writeasong.today" />
-        <link rel="icon" href="/favicon.ico" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
       </Head>
       <main className={styles.main}>
         <header className="header">
@@ -90,16 +107,30 @@ export default function Home() {
         </header>
         <div className={styles['page-wrapper']}>
           <div className="content">
-            <div onClick={() => generateKey(keys)}>
+            <div style={{ textAlign: 'center' }}>
               <KeyDisplay randomKey={randomKey} />
+              <button
+                className="generate-button random"
+                onClick={() => generateKey(keys)}
+              >
+                Randomize
+              </button>
             </div>
             <Progressions randomKey={randomKey} />
-            <div className="card" onClick={() => generateTempo()}>
-              <p>Tempo</p>
-              <div className="tempo">
-                <h2>{tempo}</h2>
-                <p>BPM</p>
+            <div style={{ textAlign: 'center' }}>
+              <div className="card">
+                <p>Tempo</p>
+                <div className="tempo">
+                  <h2>{tempo}</h2>
+                  <p>BPM</p>
+                </div>
               </div>
+              <button
+                className="generate-button random"
+                onClick={() => generateTempo()}
+              >
+                Randomize
+              </button>
             </div>
           </div>
           <button
