@@ -143,7 +143,15 @@ export default function Home() {
           <About />
         </div>
       </main>
-      <footer>&copy; Frank Marra 2023</footer>
+      <footer>
+        &copy;{' '}
+        <span>
+          <a href="https://frankmarra.dev" target="_blank" rel="noreferrer">
+            Frank Marra
+          </a>
+        </span>{' '}
+        2023
+      </footer>
     </>
   )
 }

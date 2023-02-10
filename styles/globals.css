@@ -154,7 +154,7 @@ ul {
 }
 
 .generate-button {
-  background-color: #6892e7;
+  background-color: #306de5;
   color: white;
   font-size: 1.5rem;
   border: none;
@@ -171,7 +171,8 @@ ul {
 }
 
 .generate-button:hover {
-  background-color: #3d6bc6;
+  background-color: #6892e7;
+  color:#0d104d;
 }
 
 .generate-button:active {
@@ -246,5 +247,6 @@ footer {
   color: white;
   text-align: center;
   position: sticky;
+  padding: .7vh;
   bottom: 0;
 }
