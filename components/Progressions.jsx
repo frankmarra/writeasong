@@ -124,7 +124,7 @@ export default function Progressions(props) {
 
   return props.randomKey ? (
     <div style={{ textAlign: 'center', marginBottom: '2vh' }}>
-      <div className="card" onClick={() => getRandomProgressions(randomKey)}>
+      <div className="card">
         <p>Progressions</p>
         <div className="progressions">
           {randomProgressions.map((progression, index) => (
