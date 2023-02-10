@@ -4,9 +4,10 @@ export default function About() {
       <div className="about">
         <p>
           WriteASong.Today is here to jump-start your song writing process.
-          Click on 'Get Inspired' and get a key, popular chord progressions, and
-          a tempo to start writing with. You can also click on either key or
-          tempo to change them independently.
+          Click on &quot;Get Inspired&quot; and get a key, popular chord
+          progressions, and a tempo to start writing with. You can also click on
+          the boxes to change them independently, but clicking on the key box
+          will change the progressions also.
         </p>
         <br />
         <p>
