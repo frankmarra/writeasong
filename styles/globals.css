@@ -181,9 +181,61 @@ ul {
 
 .about {
   margin-block: 2vh;
-  width: 70ch;
+  width: 60vw;
   font-size: 1.5rem;
   line-height: 1.5;
+}
+
+@media screen and (max-width: 820px) {
+  .header {
+    
+    margin-block: 2vh;
+    letter-spacing: .3rem;
+    font-size: 1.2rem;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+    
+  }
+
+  .card {
+    display: grid;
+    grid-template-rows: max-content 275px 1fr;
+    align-items: center;
+    
+    text-align: center;
+    font-size: 2.5rem;
+    
+    border-radius: 10px;
+    box-shadow: 0 0 10px 5px rgba(103, 103, 103, 0.2);
+    margin-block: 2vh;
+    padding-block: 3vh;
+    transition: .2s;
+  }
+
+  .key-name, .progressions, .tempo {
+  
+  
+    font-size: 2rem;
+    text-align: center;
+
+  }
+
+  .progression {
+    font-size: 1.2rem;
+  }
+
+  .about {
+    font-size: 1.8rem;
+    line-height: 1.6;
+  }
+
+  .generate-button {
+    font-size: 2rem;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -197,7 +249,7 @@ ul {
   .content {
     display: flex;
     flex-direction: column;
-    width: 70vw;
+    width: 85vw;
     
   }
 
@@ -219,7 +271,7 @@ ul {
   .key-name, .progressions, .tempo {
   
   
-    font-size: .8rem;
+    font-size: 1.2rem;
     text-align: center;
 
   }
@@ -232,13 +284,16 @@ ul {
   }
 
   .progression {
-    font-size: .46rem;
+    font-size: .54rem;
   }
 
   .about {
-    width: 40ch;
-    font-size: .7rem;
-    line-height: 1.5;
+    font-size: 1.2rem;
+    line-height: 1.7;
+  }
+
+  .generate-button {
+    font-size: 1rem;
   }
 }
   
